@@ -9,6 +9,7 @@ import SpinnerIcon from '@/assets/icons/spinner.svg?react'
 import XIcon from '@/assets/icons/x.svg?react'
 import { Badge } from '@/components/badge'
 import { Button } from './components/button'
+import { ButtonIcon } from './components/buttton-icon/button-icon'
 
 
 export function  App() {
@@ -40,12 +41,17 @@ export function  App() {
         <Badge variant = 'primary'>2 de 5</Badge>
       </div>
 
-      <div>
+      <div className='flex gap-2'>
         <Button variant='primary' size='md' icon={PlusIcon}>
           Adicionar
         </Button>
       </div>
 
+      <div className='flex gap-2'>
+        <ButtonIcon variant='primary' icon={PlusIcon}/>
+        <ButtonIcon variant='secondary' icon={PlusIcon}/>
+        <ButtonIcon variant='tertiary' icon={PlusIcon}/>
+      </div>
 
 
     </div>
