@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text } from './text';
+import { Text } from '../text/text';
 import {badgeVariants} from './badge-variants'
 import { badgeTextVariants } from './badge-text-variants';
 import type { VariantProps } from 'class-variance-authority';
