@@ -7,11 +7,12 @@ import PencilIcon from './assets/icons/pencil.svg?react'
 import PlusIcon from './assets/icons/plus.svg?react'
 import SpinnerIcon from './assets/icons/spinner.svg?react'
 import XIcon from './assets/icons/x.svg?react'
+import { Badge } from './components/badge'
 
 
 export function  App() {
   return (
-    <div className='grid gap-3'>
+    <div className='grid gap-3 p-6'>
       <div className='flex flex-col gap-2'>
         <Text variant='body-sm-bold' className='text-pink-base'>
           Olá
@@ -32,6 +33,15 @@ export function  App() {
         <Icon svg={SpinnerIcon} animate className='fill-green-base'/>
         <Icon svg={XIcon} className='fill-green-base'/>
       </div>
+
+      <div className='flex gap-2'>
+        <Badge variant = 'secondary'>2</Badge>
+        <Badge variant = 'primary'>2 de 5</Badge>
+      </div>
+
+
+
+
     </div>
   )
 }
