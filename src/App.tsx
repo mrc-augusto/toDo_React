@@ -10,11 +10,12 @@ import XIcon from '@/assets/icons/x.svg?react'
 import { Badge } from '@/components/badge'
 import { Button } from './components/button'
 import { ButtonIcon } from './components/buttton-icon/button-icon'
+import { InputText } from './components/input-text/input-text'
 
 
 export function  App() {
   return (
-    <div className='grid gap-3 p-6'>
+    <div className='grid gap-5 p-6'>
       <div className='flex flex-col gap-2'>
         <Text variant='body-sm-bold' className='text-pink-base'>
           Olá
@@ -51,6 +52,10 @@ export function  App() {
         <ButtonIcon variant='primary' icon={PlusIcon}/>
         <ButtonIcon variant='secondary' icon={PlusIcon}/>
         <ButtonIcon variant='tertiary' icon={PlusIcon}/>
+      </div>
+
+      <div className='flex gap-2'>
+        <InputText/>
       </div>
 
 
