@@ -1,13 +1,13 @@
 import './index.css'
-import { Text } from './components/text/text'
-import { Icon } from './components/icon/icon'
-import TrashIcon from './assets/icons/trash.svg?react'
-import CheckIcon from './assets/icons/check.svg?react'
-import PencilIcon from './assets/icons/pencil.svg?react'
-import PlusIcon from './assets/icons/plus.svg?react'
-import SpinnerIcon from './assets/icons/spinner.svg?react'
-import XIcon from './assets/icons/x.svg?react'
-import { Badge } from './components/badge/badge'
+import { Text } from '@/components/text'
+import { Icon } from '@/components/icon'
+import TrashIcon from '@/assets/icons/trash.svg?react'
+import CheckIcon from '@/assets/icons/check.svg?react'
+import PencilIcon from '@/assets/icons/pencil.svg?react'
+import PlusIcon from '@/assets/icons/plus.svg?react'
+import SpinnerIcon from '@/assets/icons/spinner.svg?react'
+import XIcon from '@/assets/icons/x.svg?react'
+import { Badge } from '@/components/badge'
 
 
 export function  App() {
