@@ -8,6 +8,7 @@ import PlusIcon from '@/assets/icons/plus.svg?react'
 import SpinnerIcon from '@/assets/icons/spinner.svg?react'
 import XIcon from '@/assets/icons/x.svg?react'
 import { Badge } from '@/components/badge'
+import { Button } from './components/button'
 
 
 export function  App() {
@@ -39,6 +40,11 @@ export function  App() {
         <Badge variant = 'primary'>2 de 5</Badge>
       </div>
 
+      <div>
+        <Button variant='primary' size='md' icon={PlusIcon}>
+          Adicionar
+        </Button>
+      </div>
 
 
 
