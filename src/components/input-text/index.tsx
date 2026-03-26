@@ -1,3 +1,4 @@
+import type { ComponentProps } from "react";
 import  { type VariantProps, cx } from "class-variance-authority";
 // import {cx} from 'class-variance-authority'
 import  { inputTextVariants } from "./input-text-variants";
@@ -5,7 +6,7 @@ import { textVariants } from "../text/text-variants";
 
 
 interface InputTextProps extends VariantProps<typeof inputTextVariants
->, Omit<React.ComponentProps<'input'>, 'size'| 'disabled'>{
+>, Omit<ComponentProps<'input'>, 'size'| 'disabled'>{
 
 }
 

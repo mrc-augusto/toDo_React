@@ -8,9 +8,10 @@ import PlusIcon from '@/assets/icons/plus.svg?react'
 import SpinnerIcon from '@/assets/icons/spinner.svg?react'
 import XIcon from '@/assets/icons/x.svg?react'
 import { Badge } from '@/components/badge'
-import { Button } from './components/button'
-import { ButtonIcon } from './components/buttton-icon/button-icon'
-import { InputText } from './components/input-text/input-text'
+import { Button } from '@/components/button'
+import { ButtonIcon } from '@/components/buttton-icon'
+import { InputText } from '@/components/input-text'
+import { InputCheckbox } from '@/components/input-checkbox'
 
 
 export function  App() {
@@ -56,6 +57,10 @@ export function  App() {
 
       <div className='flex gap-2'>
         <InputText/>
+      </div>
+
+      <div className='flex gap-2'>
+        <InputCheckbox/>
       </div>
 
 
