@@ -3,6 +3,7 @@ import { cva } from "class-variance-authority";
   export const buttonIconIconVariants = cva('transition', {
     variants:{
       variant:{
+        none: '',
         primary: 'fill-white',
         secondary: 'fill-pink-dark group-hover:fill-white',
         tertiary: 'fill-gray-300 group-hover:fill-gray-400'
