@@ -1,4 +1,4 @@
-
+export const TASKS_STORAGE_KEY = 'tasks'
 
 export const TaskState = {
   Creating: 'creating',
