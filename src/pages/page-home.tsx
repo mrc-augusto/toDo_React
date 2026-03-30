@@ -1,5 +1,5 @@
-import { TaskItem } from "@/assets/core-components/task-item";
-import { TasksSummary } from "@/assets/core-components/tasks-summary";
+import { TaskItem } from "@/core-components/task-item";
+import { TasksSummary } from "@/core-components/tasks-summary";
 import { Container } from "@/components/container";
 
 export function PageHome(){
