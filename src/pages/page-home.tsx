@@ -1,10 +1,13 @@
+import { TasksSummary } from "@/assets/core-components/tasks-summary";
 import { Container } from "@/components/container";
 
 export function PageHome(){
   return (
     <>
-      <Container>
-        Home
+      <Container as="article" className="space-y-3">
+        <header className="flex items-center justify-between">
+          <TasksSummary/>
+        </header>
       </Container>
     </>
   )

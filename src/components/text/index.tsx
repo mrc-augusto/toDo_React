@@ -5,7 +5,7 @@ import { textVariants } from "./text-variants";
 
 interface TextProps extends VariantProps<typeof textVariants>{
   as?: keyof JSX.IntrinsicElements
-  className: string
+  className?: string
   children: ReactNode
 }
 
