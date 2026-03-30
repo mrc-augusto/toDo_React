@@ -1,3 +1,4 @@
+import { TaskItem } from "@/assets/core-components/task-item";
 import { TasksSummary } from "@/assets/core-components/tasks-summary";
 import { Container } from "@/components/container";
 
@@ -8,6 +9,9 @@ export function PageHome(){
         <header className="flex items-center justify-between">
           <TasksSummary/>
         </header>
+        <main>
+          <TaskItem/>
+        </main>
       </Container>
     </>
   )
