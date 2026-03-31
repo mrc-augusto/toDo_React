@@ -10,6 +10,7 @@ import { useState, type ChangeEvent, type SubmitEvent } from "react";
 import { InputText } from "@/components/input-text";
 import { TaskState, type Task } from "@/models/task";
 import { cx } from "class-variance-authority";
+import { useTask } from "@/hooks/use-task";
 
 interface TaskItemProps {
   task: Task;
@@ -21,6 +22,7 @@ export function TaskItem({ task }: TaskItemProps) {
   );
 
   const [taskTitle, setTaskTitle] = useState("");
+  const {updateTask, updateTaskStatus} = useTask()
 
   function handleEditTask() {
     setIsEditing(true);
@@ -35,9 +37,14 @@ export function TaskItem({ task }: TaskItemProps) {
   }
 
   function handleSaveTask(e: SubmitEvent<HTMLFormElement>) {
-    console.log({id: task?.id, title: taskTitle})
     e.preventDefault();
+    updateTask(task.id, {title: taskTitle})
     setIsEditing(false);
+  }
+
+  function handleUpdateTaskStatus(e: ChangeEvent<HTMLInputElement>){
+    const checked = e.target.checked
+    updateTaskStatus(task.id, checked)
   }
 
   return (
@@ -45,8 +52,8 @@ export function TaskItem({ task }: TaskItemProps) {
       {!isEditing ? (
         <div className="flex items-center gap-4">
           <InputCheckbox
-            value={task?.concluded?.toString()}
             checked={task?.concluded}
+            onChange={handleUpdateTaskStatus}
           />
           <Text
             className={cx("flex-1", {
@@ -67,6 +74,7 @@ export function TaskItem({ task }: TaskItemProps) {
       ) : (
         <form onSubmit={handleSaveTask} className="flex items-center gap-4">
           <InputText
+            value={taskTitle}
             className="flex-1"
             onChange={handleChangeTaskTitle}
             required
