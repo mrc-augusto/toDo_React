@@ -49,9 +49,14 @@ export function useTask() {
     );
   }
 
+  function deleteTask (id: string){
+    setTasks(tasks.filter((task)=> task.id !== id))
+  }
+
   return {
     prepareTask,
     updateTaskStatus,
     updateTask,
+    deleteTask
   };
 }
